@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <title>Harry Potter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Cinzel", serif;
+            font-optical-sizing: auto;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.5);
+            /* Adjust the brightness if needed */
+        }
+
+        .text-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            /* Remove padding */
+            margin: 20px auto;
+            /* Remove margin */
+            border-radius: 5px;
+            animation: fadeIn 1s ease forwards;
+            width: calc(100% - 60px);
+            /* Set width to 100% */
+            word-wrap: break-word;
+            /* Allow text to wrap within the box */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .text {
+            font-size: 15px;
+            /* Reduce the font size */
+            color: #040404;
+            overflow: hidden;
+            border-right: 2px solid #333;
+            animation: typing 2s steps(40, end);
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .next-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: none;
+        }
+
+        .next-button:hover {
+            background-color: #25abf9;
+        }
+
+        .continue-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: none;
+        }
+
+        .continue-button:hover {
+            background-color: #25abf9;
+        }
+    </style>
+    <script src="button-styles.js"></script>
+</head>
+
+<body>
+    <!-- section-1 -->
+    <div class="section" id="section1">
+        <div class="background" style="background-image: url('images/20.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text1"></span>
+        </div>
+        <button class="next-button" onclick="nextText(1)">Next</button>
+        <button class="continue-button" onclick="nextSection(1)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-2 -->
+    <div class="section" id="section2" style="display: none;">
+        <div class="background" style="background-image: url('images/21.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text2"></span>
+        </div>
+        <button class="next-button" onclick="nextText(2)">Next</button>
+        <button class="continue-button" onclick="nextSection(2)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-3 -->
+    <div class="section" id="section3" style="display: none;">
+        <div class="background" style="background-image: url('images/22.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text3"></span>
+        </div>
+        <button class="next-button" onclick="nextText(3)">Next</button>
+        <button class="continue-button" onclick="nextSection(3)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-4 -->
+    <div class="section" id="section4" style="display: none;">
+        <div class="background" style="background-image: url('images/23.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text4"></span>
+        </div>
+        <button class="next-button" onclick="nextText(4)">Next</button>
+        <button class="continue-button" onclick="nextSection(4)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-5 -->
+    <div class="section" id="section5" style="display: none;">
+        <div class="background" style="background-image: url('images/24.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text5"></span>
+        </div>
+        <button class="next-button" onclick="nextText(5)">Next</button>
+        <button class="continue-button" onclick="nextSection(5)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-6 -->
+    <div class="section" id="section6" style="display: none;">
+        <div class="background" style="background-image: url('images/25.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text6"></span>
+        </div>
+        <button class="next-button" onclick="nextText(6)">Next</button>
+        <button class="continue-button" onclick="nextSection(6)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-7 -->
+    <div class="section" id="section7" style="display: none;">
+        <div class="background" style="background-image: url('images/26.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text7"></span>
+        </div>
+        <button class="next-button" onclick="nextText(7)">Next</button>
+        <button class="continue-button" onclick="openNewPage('index.html')">Next Chapter</button>
+    </div>
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const nextButtons = document.querySelectorAll('.next-button');
+        const continueButtons = document.querySelectorAll('.continue-button');
+        const texts = [
+            "'Harry, it's so good to see you!' Mrs. Weasley exclaimed, enveloping Harry in a warm hug.'Fred and George have some brilliant tricks to show you,' Ron grinned mischievously.Harry spent his summer at the Weasleys' Burrow, where he felt a sense of belonging and warmth. The Weasley twins, Fred and George, introduced him to the magical wonders that awaited him in the wizarding world.",
+            "'Get in, Harry! We're going to miss the Hogwarts Express!' Ron shouted, opening the door of the flying Ford Anglia.'This is insane! I can't believe we're flying!' Harry exclaimed, gripping the edge of the seat.To reach Hogwarts after missing the train, Harry and Ron flew the enchanted Ford Anglia. Little did they know that their unconventional entrance would set the tone for a year filled with extraordinary events.",
+            "'Did you hear that voice? 'Kill... kill...'' Hermione shuddered.'It's probably just Peeves playing tricks,' Ron scoffed.The trio noticed mysterious whispers echoing through the Hogwarts corridors. As the school year progressed, the voices became more ominous, hinting at a hidden danger within the castle walls.",
+            "'We'll turn ourselves into Slytherins and ask Malfoy about the Chamber of Secrets,' Hermione explained the plan.'Do you really think this will work?' Harry asked, uncertain.To unravel the mystery of the Chamber of Secrets, the trio brewed a Polyjuice Potion to transform into Slytherins. The potion led to unexpected transformations and revealed a dark secret from Hogwarts' past.",
+            "'Hermione's been petrified! And so has Colin Creevey!' Ron exclaimed in shock.'We need to find out who's behind this,' Harry declared, determination in his eyes.A series of petrifications spread fear throughout Hogwarts. The trio, along with the help of Hagrid and Professor Lockhart, uncovered clues leading them closer to the Chamber of Secrets and the monster within.",
+            "'You're the Heir of Slytherin, Harry. You can speak Parseltongue,' Tom Riddle's voice echoed in the Chamber.'I won't let you harm anyone else!' Harry shouted, facing the memory of Tom Riddle.The Chamber of Secrets was opened, and the monster unleashed. Guided by Tom Riddle's memory, Harry confronted the true heir of Slytherin and saved Ginny Weasley from the deadly serpent.",
+            "'We did it! We saved Ginny!' Ron cheered, relief evident in his voice.'And we figured out that Hagrid wasn't the one opening the Chamber,' Hermione added.With the mystery of the Chamber solved and Hagrid freed, the trio celebrated their triumph. The bond of friendship grew stronger as they faced adversity together, marking another unforgettable chapter in the magical journey of Harry Potter."
+        ];
+
+        let currentSectionIndex = 0;
+        let typingInterval;
+
+        function typeText(sectionIndex) {
+            const textElement = document.getElementById('text' + sectionIndex);
+            let i = 0;
+            typingInterval = setInterval(() => {
+                if (i < texts[sectionIndex - 1].length) {
+                    textElement.textContent += texts[sectionIndex - 1].charAt(i);
+                    i++;
+                    if (i == 5) { // Display Next button after 5 characters
+                        nextButtons[currentSectionIndex].style.display = 'block';
+                    }
+                } else {
+                    clearInterval(typingInterval);
+                    continueButtons[currentSectionIndex].style.display = 'block';
+                }
+            }, 100);
+        }
+
+        function nextText(sectionIndex) {
+            clearInterval(typingInterval);
+            const textElement = document.getElementById('text' + sectionIndex);
+            textElement.textContent = texts[sectionIndex - 1];
+            nextButtons[currentSectionIndex].style.display = 'none';
+            continueButtons[sectionIndex - 1].style.display = 'block';
+        }
+
+        function nextSection(sectionIndex) {
+            sections[currentSectionIndex].style.display = 'none';
+            currentSectionIndex = sectionIndex;
+            if (currentSectionIndex < sections.length) {
+                sections[currentSectionIndex].style.display = 'block';
+                typeText(currentSectionIndex + 1);
+            }
+        }
+
+        window.onload = () => {
+            nextSection(0);
+        };
+
+        // Function to load Howler.js asynchronously
+        function loadScript(url, callback) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = url;
+            script.onload = callback;
+            document.body.appendChild(script);
+        }
+
+        // Load Howler.js and start playing music when it's loaded
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js", function() {
+            var sound = new Howl({
+                src: ['Harry-Potter-Theme.mp3'], // Replace with the path to your audio file
+                autoplay: true, // Autoplay the audio
+                loop: true, // Loop the audio
+                volume: 1 // Adjust volume as needed
+            });
+        });
+    </script>
+</body>
+
+</html>

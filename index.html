@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="button-styles.css">
+    <title>Harry Potter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("images/2.jpg");
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Cinzel", serif;
+            font-optical-sizing: auto;
+            flex-direction: column;
+        }
+
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            padding-right: 130px;
+        }
+
+        .image-container img {
+            width: 27%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .image-container img:hover,
+        .image-container img:focus {
+            transform: scale(1.2);
+        }
+        #Welcome {
+            text-align: center;
+            color: white;
+            line-height: 0;
+        }
+
+        #heading1 {
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+    <script src="button-styles.js"></script>
+</head>
+
+<body>
+    <header id="Welcome">
+        <h1 id="heading1">Choose your Journey</h1>
+    </header>
+    <div class="image-container">
+        <img src="images\3.jpg" alt="Image 1" onclick="openNewPage('book1.html')">
+        <img src="images\4.jpg" alt="Image 2" onclick="openNewPage('book2.html')">
+        <img src="images\5.jpg" alt="Image 3" onclick="openNewPage('book3.html')">
+        <img src="images\6.jpg" alt="Image 4" onclick="openNewPage('book4.html')">
+    </div>
+    <div class="image-container">
+        <img src="images\7.jpg" alt="Image 5" onclick="openNewPage('book5.html')">
+        <img src="images\8.jpg" alt="Image 6" onclick="openNewPage('book6.html')">
+        <img src="images\9.jpg" alt="Image 4" onclick="openNewPage('book7.html')">
+        <img src="images\10.jpg" alt="Image 5" onclick="openNewPage('book8.html')">
+    </div>
+    <script>
+        // Function to load Howler.js asynchronously
+        function loadScript(url, callback) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = url;
+            script.onload = callback;
+            document.body.appendChild(script);
+        }
+
+        // Load Howler.js and start playing music when it's loaded
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js", function() {
+            var sound = new Howl({
+                src: ['Harry-Potter-Theme.mp3'], // Replace with the path to your audio file
+                autoplay: true, // Autoplay the audio
+                loop: true, // Loop the audio
+                volume: 1 // Adjust volume as needed
+            });
+        });
+    </script>
+</body>
+
+</html>

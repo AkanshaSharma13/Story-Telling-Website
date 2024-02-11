@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="button-styles.css">
+    <title>Harry Potter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("images/19.jpg");
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Cinzel", serif;
+            font-optical-sizing: auto;
+            flex-direction: column;
+        }
+
+        #Welcome {
+            text-align: center;
+            color: white;
+            line-height:0%;
+        }
+
+        #heading1 {
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        #heading2 {
+            font-style: normal;
+            font-size: 400%;
+            line-height: 0.5;
+        }
+        
+    </style>
+    <script src="button-styles.js"></script>
+</head>
+
+<body>
+    <header id="Welcome">
+        <h1 id="heading1">Welcome to</h1>
+        <h2 id="heading2">Harry Potter and the </h2>
+        <h2 id="heading2">Chamber of Secret  </h2>
+    </header>
+    <button type="button" class="btn btn-light" id="Button" onclick="openNewPage('story2.html')">
+        Continue
+    </button>
+    <script>
+        // Function to load Howler.js asynchronously
+        function loadScript(url, callback) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = url;
+            script.onload = callback;
+            document.body.appendChild(script);
+        }
+
+        // Load Howler.js and start playing music when it's loaded
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js", function() {
+            var sound = new Howl({
+                src: ['Harry-Potter-Theme.mp3'], // Replace with the path to your audio file
+                autoplay: true, // Autoplay the audio
+                loop: true, // Loop the audio
+                volume: 1 // Adjust volume as needed
+            });
+        });
+    </script>
+    
+    </body>
+
+</html>

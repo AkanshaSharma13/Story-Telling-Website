@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <title>Harry Potter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Cinzel", serif;
+            font-optical-sizing: auto;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.5);
+            /* Adjust the brightness if needed */
+        }
+
+        .text-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            /* Remove padding */
+            margin: 20px auto;
+            /* Remove margin */
+            border-radius: 5px;
+            animation: fadeIn 1s ease forwards;
+            width: calc(100% - 60px);
+            /* Set width to 100% */
+            word-wrap: break-word;
+            /* Allow text to wrap within the box */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .text {
+            font-size: 15px;
+            /* Reduce the font size */
+            color: #040404;
+            overflow: hidden;
+            border-right: 2px solid #333;
+            animation: typing 2s steps(40, end);
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .next-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: none;
+        }
+
+        .next-button:hover {
+            background-color: #25abf9;
+        }
+
+        .continue-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: none;
+        }
+
+        .continue-button:hover {
+            background-color: #25abf9;
+        }
+    </style>
+    <script src="button-styles.js"></script>
+</head>
+
+<body>
+    <!-- section-1 -->
+    <div class="section" id="section1">
+        <div class="background" style="background-image: url('images/36.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text1"></span>
+        </div>
+        <button class="next-button" onclick="nextText(1)">Next</button>
+        <button class="continue-button" onclick="nextSection(1)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-2 -->
+    <div class="section" id="section2" style="display: none;">
+        <div class="background" style="background-image: url('images/37.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text2"></span>
+        </div>
+        <button class="next-button" onclick="nextText(2)">Next</button>
+        <button class="continue-button" onclick="nextSection(2)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-3 -->
+    <div class="section" id="section3" style="display: none;">
+        <div class="background" style="background-image: url('images/38.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text3"></span>
+        </div>
+        <button class="next-button" onclick="nextText(3)">Next</button>
+        <button class="continue-button" onclick="nextSection(3)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-4 -->
+    <div class="section" id="section4" style="display: none;">
+        <div class="background" style="background-image: url('images/39.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text4"></span>
+        </div>
+        <button class="next-button" onclick="nextText(4)">Next</button>
+        <button class="continue-button" onclick="nextSection(4)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-5 -->
+    <div class="section" id="section5" style="display: none;">
+        <div class="background" style="background-image: url('images/40.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text5"></span>
+        </div>
+        <button class="next-button" onclick="nextText(5)">Next</button>
+        <button class="continue-button" onclick="nextSection(5)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-6 -->
+    <div class="section" id="section6" style="display: none;">
+        <div class="background" style="background-image: url('images/41.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text6"></span>
+        </div>
+        <button class="next-button" onclick="nextText(6)">Next</button>
+        <button class="continue-button" onclick="nextSection(6)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-7 -->
+    <div class="section" id="section7" style="display: none;">
+        <div class="background" style="background-image: url('images/42.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text7"></span>
+        </div>
+        <button class="next-button" onclick="nextText(7)">Next</button>
+        <button class="continue-button" onclick="openNewPage('index.html')">Next Chapter</button>
+    </div>
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const nextButtons = document.querySelectorAll('.next-button');
+        const continueButtons = document.querySelectorAll('.continue-button');
+        const texts = [
+            "'What's this? Harry's name is in the Goblet of Fire!' Ron exclaimed in disbelief.'I didn't put my name in! I swear!' Harry protested, frustration evident in his voice.Harry finds himself unexpectedly entered into the dangerous Triwizard Tournament, a competition reserved for wizards of age. Suspicions arise, and the mystery deepens as to how his name ended up in the magical goblet.",
+            "'Will you be my date to the Yule Ball, Hermione?' Ron stammered, his face turning red.'I've already got a date, Ron. Sorry,' Hermione replied with a small smile.The Triwizard Tournament brought not only challenges but also social dilemmas. The Yule Ball became a pivotal event, highlighting the complexities of teenage relationships and the tensions within the trio.",
+            "'The Dark Mark! What does it mean?' Harry asked, fear gripping his heart.'Voldemort is back, Harry. The Death Eaters are on the rise again,' Dumbledore explained solemnly.The resurgence of the Dark Mark signaled the return of Lord Voldemort. The wizarding world faced a renewed threat, and Harry realized that the challenges he faced in the Triwizard Tournament were part of a larger, more sinister plot.",
+            "'We have to stick together in the maze. It's the only way to win,' Harry instructed Cedric and Viktor.'Agreed. Let's do this,' Cedric replied, determination in his eyes.The final task of the Triwizard Tournament took place in a treacherous maze filled with magical creatures and challenges. The competitors formed an unlikely alliance as they navigated the maze's twists and turns, unaware of the dark forces at play.",
+            "'My faithful Death Eaters, he is reborn! The Dark Lord has returned!' Wormtail declared.'Voldemort is back,' Harry whispered, disbelief and dread mingling in his voice.In a chilling and unexpected turn of events, Lord Voldemort returned to full power. The resurrection ritual, aided by Harry's blood, marked the beginning of a new era of darkness and danger for the wizarding world.",
+            "'Take my hand, Harry!' Cedric shouted as they reached the Triwizard Cup together.'No, we'll take it together on three. One, two, three!' Harry replied.The Triwizard Tournament, supposed to be a contest of skill and courage, turned into a tragic event. The Triwizard Cup became a portkey that transported Harry and Cedric to a graveyard, where Voldemort's dark plans reached a horrifying climax.",
+            "'The tournament was a trap, Harry. Voldemort used you to return to power,' Dumbledore explained, his eyes filled with regret.'We can't hide from the truth, Harry. The fight against darkness has only just begun,' Sirius added.As the dust settled, the consequences of the tournament unfolded. Harry faced the harsh reality that Voldemort had indeed returned, and the wizarding world was on the brink of a perilous era. The ominous future cast a shadow over Hogwarts and its students, setting the stage for the challenges that lay ahead."
+        ];
+
+        let currentSectionIndex = 0;
+        let typingInterval;
+
+        function typeText(sectionIndex) {
+            const textElement = document.getElementById('text' + sectionIndex);
+            let i = 0;
+            typingInterval = setInterval(() => {
+                if (i < texts[sectionIndex - 1].length) {
+                    textElement.textContent += texts[sectionIndex - 1].charAt(i);
+                    i++;
+                    if (i == 5) { // Display Next button after 5 characters
+                        nextButtons[currentSectionIndex].style.display = 'block';
+                    }
+                } else {
+                    clearInterval(typingInterval);
+                    continueButtons[currentSectionIndex].style.display = 'block';
+                }
+            }, 100);
+        }
+
+        function nextText(sectionIndex) {
+            clearInterval(typingInterval);
+            const textElement = document.getElementById('text' + sectionIndex);
+            textElement.textContent = texts[sectionIndex - 1];
+            nextButtons[currentSectionIndex].style.display = 'none';
+            continueButtons[sectionIndex - 1].style.display = 'block';
+        }
+
+        function nextSection(sectionIndex) {
+            sections[currentSectionIndex].style.display = 'none';
+            currentSectionIndex = sectionIndex;
+            if (currentSectionIndex < sections.length) {
+                sections[currentSectionIndex].style.display = 'block';
+                typeText(currentSectionIndex + 1);
+            }
+        }
+
+        window.onload = () => {
+            nextSection(0);
+        };
+
+        // Function to load Howler.js asynchronously
+        function loadScript(url, callback) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = url;
+            script.onload = callback;
+            document.body.appendChild(script);
+        }
+
+        // Load Howler.js and start playing music when it's loaded
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js", function() {
+            var sound = new Howl({
+                src: ['Harry-Potter-Theme.mp3'], // Replace with the path to your audio file
+                autoplay: true, // Autoplay the audio
+                loop: true, // Loop the audio
+                volume: 1 // Adjust volume as needed
+            });
+        });
+    </script>
+</body>
+
+</html>

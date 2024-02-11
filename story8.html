@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <title>Harry Potter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Cinzel", serif;
+            font-optical-sizing: auto;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.5);
+            /* Adjust the brightness if needed */
+        }
+
+        .text-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            /* Remove padding */
+            margin: 20px auto;
+            /* Remove margin */
+            border-radius: 5px;
+            animation: fadeIn 1s ease forwards;
+            width: calc(100% - 60px);
+            /* Set width to 100% */
+            word-wrap: break-word;
+            /* Allow text to wrap within the box */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .text {
+            font-size: 15px;
+            /* Reduce the font size */
+            color: #040404;
+            overflow: hidden;
+            border-right: 2px solid #333;
+            animation: typing 2s steps(40, end);
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .next-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: none;
+        }
+
+        .next-button:hover {
+            background-color: #25abf9;
+        }
+
+        .continue-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: none;
+        }
+
+        .continue-button:hover {
+            background-color: #25abf9;
+        }
+    </style>
+    <script src="button-styles.js"></script>
+</head>
+
+<body>
+    <!-- section-1 -->
+    <div class="section" id="section1">
+        <div class="background" style="background-image: url('images/68.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text1"></span>
+        </div>
+        <button class="next-button" onclick="nextText(1)">Next</button>
+        <button class="continue-button" onclick="nextSection(1)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-2 -->
+    <div class="section" id="section2" style="display: none;">
+        <div class="background" style="background-image: url('images/69.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text2"></span>
+        </div>
+        <button class="next-button" onclick="nextText(2)">Next</button>
+        <button class="continue-button" onclick="nextSection(2)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-3 -->
+    <div class="section" id="section3" style="display: none;">
+        <div class="background" style="background-image: url('images/70.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text3"></span>
+        </div>
+        <button class="next-button" onclick="nextText(3)">Next</button>
+        <button class="continue-button" onclick="nextSection(3)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-4 -->
+    <div class="section" id="section4" style="display: none;">
+        <div class="background" style="background-image: url('images/71.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text4"></span>
+        </div>
+        <button class="next-button" onclick="nextText(4)">Next</button>
+        <button class="continue-button" onclick="nextSection(4)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-5 -->
+    <div class="section" id="section5" style="display: none;">
+        <div class="background" style="background-image: url('images/72.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text5"></span>
+        </div>
+        <button class="next-button" onclick="nextText(5)">Next</button>
+        <button class="continue-button" onclick="nextSection(5)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-6 -->
+    <div class="section" id="section6" style="display: none;">
+        <div class="background" style="background-image: url('images/73.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text6"></span>
+        </div>
+        <button class="next-button" onclick="nextText(6)">Next</button>
+        <button class="continue-button" onclick="nextSection(6)" style="display: none;">Continue</button>
+    </div>
+    <!-- section-7 -->
+    <div class="section" id="section7" style="display: none;">
+        <div class="background" style="background-image: url('images/74.png');"></div>
+        <div class="text-container">
+            <span class="text" id="text7"></span>
+        </div>
+        <button class="next-button" onclick="nextText(7)">Next</button>
+        <button class="continue-button" onclick="openNewPage('index.html')">Next Chapter</button>
+    </div>
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const nextButtons = document.querySelectorAll('.next-button');
+        const continueButtons = document.querySelectorAll('.continue-button');
+        const texts = [
+            "'We need to find the remaining Horcruxes. They're the key to ending Voldemort,' Harry asserted.'But where do we even begin? It's like searching for a needle in a haystack,' Hermione remarked.The trio resumes their quest for Horcruxes, facing the challenges of a vast and dangerous wizarding world. The urgency to locate and destroy these dark objects becomes more pressing as Voldemort consolidates his power.",
+            "'We have to break into Gringotts. The next Horcrux is there,' Harry stated.'Breaking into a bank? That's madness!' Ron exclaimed.The trio undertakes a daring heist at Gringotts to retrieve another Horcrux. The mission at the heart of the wizarding world's financial center adds complexity to their journey, testing their courage and resourcefulness.",
+            "'The Elder Wand is the final Horcrux. We need to possess it to defeat Voldemort,' Harry revealed.'But it's in Dumbledore's tomb. How do we get it without alerting the Death Eaters?' Hermione questioned.The revelation of the Elder Wand as the final Horcrux prompts the trio to devise a plan to retrieve it. The quest takes them to Dumbledore's tomb, and the stakes escalate as they confront the Deathly Hallows.",
+            "'The battle is upon us. We have to defend Hogwarts!' Harry rallied the allies.'They won't back down, Harry. We have to be ready for anything,' Ginny cautioned.As Voldemort and his Death Eaters launch a full-scale assault on Hogwarts, the stage is set for the ultimate showdown. The battle becomes a chaotic and intense struggle for the wizarding world's future.",
+            "'Snape, he's dead. But he was on our side. He was protecting Harry,' Hermione realized.'And he loved my mother,' Harry added, his voice heavy with emotion.Snape's true loyalty and his unspoken love for Lily Potter are revealed in his final moments. The revelation adds complexity to the narrative, painting Snape as a tragic hero in the battle against Voldemort.",
+            "'It all comes down to this, Harry. You and Voldemort, one last time,' Ron said, his tone serious.'I'm ready. For all of us,' Harry replied, determination in his eyes.The climactic duel between Harry and Voldemort unfolds, determining the fate of the wizarding world. The final confrontation is laden with the weight of prophecy, sacrifice, and the choices that define the battle between good and evil.",
+            "'It's over. Voldemort is gone,' Harry announced, relief evident in his voice.'And Hogwarts will be rebuilt. A new era begins,' Hermione added.With Voldemort defeated, the wizarding world faces the aftermath of the battle. The sacrifices made, the losses endured, and the hope for a better future are woven into the epilogue, marking the conclusion of the epic saga of Harry Potter."
+        ];
+
+        let currentSectionIndex = 0;
+        let typingInterval;
+
+        function typeText(sectionIndex) {
+            const textElement = document.getElementById('text' + sectionIndex);
+            let i = 0;
+            typingInterval = setInterval(() => {
+                if (i < texts[sectionIndex - 1].length) {
+                    textElement.textContent += texts[sectionIndex - 1].charAt(i);
+                    i++;
+                    if (i == 5) { // Display Next button after 5 characters
+                        nextButtons[currentSectionIndex].style.display = 'block';
+                    }
+                } else {
+                    clearInterval(typingInterval);
+                    continueButtons[currentSectionIndex].style.display = 'block';
+                }
+            }, 100);
+        }
+
+        function nextText(sectionIndex) {
+            clearInterval(typingInterval);
+            const textElement = document.getElementById('text' + sectionIndex);
+            textElement.textContent = texts[sectionIndex - 1];
+            nextButtons[currentSectionIndex].style.display = 'none';
+            continueButtons[sectionIndex - 1].style.display = 'block';
+        }
+
+        function nextSection(sectionIndex) {
+            sections[currentSectionIndex].style.display = 'none';
+            currentSectionIndex = sectionIndex;
+            if (currentSectionIndex < sections.length) {
+                sections[currentSectionIndex].style.display = 'block';
+                typeText(currentSectionIndex + 1);
+            }
+        }
+
+        window.onload = () => {
+            nextSection(0);
+        };
+
+        // Function to load Howler.js asynchronously
+        function loadScript(url, callback) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = url;
+            script.onload = callback;
+            document.body.appendChild(script);
+        }
+
+        // Load Howler.js and start playing music when it's loaded
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js", function() {
+            var sound = new Howl({
+                src: ['Harry-Potter-Theme.mp3'], // Replace with the path to your audio file
+                autoplay: true, // Autoplay the audio
+                loop: true, // Loop the audio
+                volume: 1 // Adjust volume as needed
+            });
+        });
+    </script>
+</body>
+
+</html>
